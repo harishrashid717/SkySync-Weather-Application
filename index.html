@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkySync-Weather Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="full-content">
+    <div class="first-page-content">
+      <!-- navigation bar -->
+      <nav>
+        <div class="navigation-bar container flex">
+          <a href="index.html">
+            <img src="images/app_logo.png" alt="SkySync logo" class="app-logo" />
+          </a>
+          <div class="nav-right flex">
+            <input class="nav-input" id="city-input" type="text" placeholder="Enter city name...">
+            <button class="nav-search primary-button" id="city-input-btn"><span id="search-text">Search </span><i
+                class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+      </nav>
+      <!-- navigation bar ends here  -->
+      <div class="intro flex">
+        <h3><span id="element" class="name-color"></span></h3>
+      </div>
+      <!-- header -->
+      <div class="header container">
+        <h1 id="temp-info-location">Weather for <span style="color: red;" class="name"></span></h1>
+        <div class="info-section flex">
+          <!-- temperature section -->
+          <div class="box">
+            <div class="box-header flex">
+              <h1>Temperatures</h1>
+            </div>
+            <div class="box-description flex">
+              <h2><span class="temp">°C</span>°C</h2>
+              <p>Temperature is <span class="temp"></span>°C</p>
+              <p>Min Temperature is <span class="temp_min"></span>°C</p>
+              <p>Max Temperature is <span class="temp_max"></span>°C</p>
+            </div>
+          </div>
+          <!-- humidity section -->
+          <div class="box">
+            <div class="box-header flex">
+              <h1>Humidity Info</h1>
+            </div>
+            <div class="box-description flex">
+              <h2><span class="humidity"></span>%</h2>
+              <p>Humidity is <span class="humidity"></span>%</p>
+              <p>Feels like <span class="feels_like"></span>°C</p>
+              <p>Pressure is <span class="pressure"></span> hPa</p>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="box-header flex">
+              <h1>Other info</h1>
+            </div>
+            <div class="box-description flex">
+              <p>Sunrise Time is <span id="sunrise"></span></p>
+              <p>Sunset Time is <span id="sunset"></span></p>
+              <p>Wind speed is <span id="speed"></span> m/s</p>
+              <p>Currently <span id="sky"></span></p>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/1dd724b973.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['It\'s the weather application SkySync – your global guide to accurate, city-specific weather reports from around the world!'],
+      typeSpeed: 40,
+
+      loop: false
+    });
+  </script>
+</body>
+
+</html>
